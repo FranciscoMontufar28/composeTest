@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".chapterOne.MainActivity"></activity>
-        <activity android:name=".chapterTwo.presentation.MovieComposeActivity">
+        <activity android:name=".chapterTwo.presentation.MovieComposeActivity"></activity>
+        <activity android:name=".chapterOne.ExampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

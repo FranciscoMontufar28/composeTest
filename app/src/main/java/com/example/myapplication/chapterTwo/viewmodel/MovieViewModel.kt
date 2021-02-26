@@ -3,6 +3,7 @@ package com.example.myapplication.chapterTwo.viewmodel
 import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myapplication.chapterTwo.data.ResultEntity
@@ -12,6 +13,7 @@ import kotlinx.coroutines.launch
 class MovieViewModel : ViewModel() {
 
     var movieMutableState: MutableState<List<ResultEntity>> = mutableStateOf(ArrayList())
+    val query =  mutableStateOf("")
 
     fun getPopularMovies() {
         viewModelScope.launch {
@@ -22,5 +24,9 @@ class MovieViewModel : ViewModel() {
             }
             movieMutableState.value = movies.results
         }
+    }
+
+    fun changeTextValue(value:String) {
+        this.query.value = value
     }
 }

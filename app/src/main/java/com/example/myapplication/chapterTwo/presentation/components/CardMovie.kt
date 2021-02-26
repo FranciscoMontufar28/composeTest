@@ -45,7 +45,6 @@ fun CardMovie(
                         contentScale = ContentScale.Crop
                     )
                 }
-
             }
             movie.title?.let { title ->
                 Row(
@@ -68,7 +67,6 @@ fun CardMovie(
                             .align(Alignment.CenterVertically),
                         style = MaterialTheme.typography.h6
                     )
-
                 }
             }
         }
